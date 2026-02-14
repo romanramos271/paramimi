@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mimi ❤️</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500;600&display=swap');
+        /* Importamos la fuente pixelada (Press Start 2P) junto a las otras */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500;600&family=Press+Start+2P&display=swap');
 
         body {
             margin: 0;
@@ -14,7 +15,6 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Un fondo un poco más cálido y romántico */
             background: linear-gradient(135deg, #fff1f1 0%, #ffd1d1 100%);
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
@@ -36,7 +36,7 @@
 
         h1 {
             font-family: 'Dancing Script', cursive;
-            color: #d6335c; /* Un rojo un poco más intenso */
+            color: #d6335c;
             font-size: 2.8rem;
             margin-bottom: 5px;
             margin-top: 0;
@@ -62,15 +62,15 @@
             font-weight: 600;
         }
 
-        /* Estilo para el reproductor de YouTube */
-        .music-player {
+        /* Estilos del Reproductor de Audio */
+        .audio-container {
             margin: 20px auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #ffccd5;
             width: 100%;
-            max-width: 350px;
+            max-width: 300px;
+            background: #fff0f3;
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid #ffccd5;
         }
 
         .btn {
@@ -90,6 +90,57 @@
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 8px 25px rgba(255, 77, 109, 0.5);
         }
+
+        /* --- ZONA CORAZÓN TETRIS --- */
+        .tetris-heart-container {
+            margin: 30px auto 10px auto;
+            display: flex;
+            justify-content: center;
+            animation: heartbeat 1.5s infinite ease-in-out;
+        }
+
+        /* La cuadrícula para formar el corazón */
+        .heart-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 18px); /* 8 columnas de bloques */
+            grid-template-rows: repeat(7, 18px);    /* 7 filas */
+            gap: 2px; /* Espacio entre bloques estilo Tetris */
+        }
+
+        /* El bloque individual estilo Tetris */
+        .t-block {
+            width: 18px;
+            height: 18px;
+            background-color: #ff4d6d; /* Color rosa principal */
+            border: 2px solid #d6335c; /* Borde más oscuro para efecto 3D */
+            border-radius: 3px;
+            box-sizing: border-box;
+            box-shadow: inset 1px 1px 0px rgba(255,255,255,0.3), inset -1px -1px 0px rgba(0,0,0,0.1);
+        }
+
+        /* Espacios vacíos invisibles */
+        .empty { visibility: hidden; }
+
+        /* Animación de latido */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.05); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.05); }
+            60% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+
+        .tetris-caption {
+            font-family: 'Press Start 2P', cursive; /* Fuente pixelada */
+            font-size: 0.55rem;
+            color: #d6335c;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        /* --------------------------- */
+
 
         .heart-bg {
             position: absolute;
@@ -116,27 +167,37 @@
         <h1>Para Mimi</h1>
         <div class="intro-quote">"Porque hay personas que te cambian la vida..."</div>
 
-        <div style="margin: 20px auto; width: 100%; max-width: 300px;">
-            <p style="margin-bottom: 5px; font-size: 0.8rem; color: #d6335c;">Dale play para la magia 🎵</p>
-            <audio controls style="width: 100%; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <div class="audio-container">
+            <p style="margin-bottom: 5px; margin-top:0; font-size: 0.8rem; color: #d6335c; font-weight: 500;">Dale play para la magia 🎵</p>
+            <audio controls style="width: 100%; border-radius: 20px; outline: none; height: 30px;">
                 <source src="cancion.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
+                Tu navegador no soporta audio.
             </audio>
         </div>
 
-
         <p>En el poco tiempo que llevamos conociéndonos, cada día me doy más cuenta de lo increíble que eres.</p>
         
-        <p>Eres hermosa, inteligente, divertida, <span class="highlight">deportista</span> y carismática. No sé cómo tengo la suerte de tenerte cerca, pero me haces sentir cosas que no sentía hace mucho tiempo.</p>
+        <p>Eres hermosa, inteligente, divertida, <span class="highlight">deportista</span> y carismática.</p>
+
+        <div class="tetris-heart-container">
+            <div class="heart-grid">
+                <div class="empty"></div><div class="t-block"></div><div class="t-block"></div><div class="empty"></div><div class="empty"></div><div class="t-block"></div><div class="t-block"></div><div class="empty"></div>
+                <div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div>
+                <div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div>
+                <div class="empty"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="empty"></div>
+                <div class="empty"></div><div class="empty"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="t-block"></div><div class="empty"></div><div class="empty"></div>
+                <div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="t-block"></div><div class="t-block"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
+            </div>
+        </div>
+        <div class="tetris-caption">CONSTRUYAMOS ALGO JUNTOS</div>
+        <p>No sé cómo tengo la suerte de tenerte cerca, pero me haces sentir cosas que no sentía hace mucho tiempo.</p>
 
         <p>Hoy quiero preguntarte:</p>
         <h2 style="color: #333; font-size: 1.3rem; margin: 20px 0;">¿Quisieras intentarlo conmigo?</h2>
         
         <p style="font-size: 0.85rem; color: #777;">(Si necesitas tiempo, lo entiendo y te esperaré, porque verte feliz es lo que más quiero).</p>
 
-        <p>Con cariño,<br><strong>Roma</strong></p>
-
-        <a href="https://wa.me/51945605009?text=Hola%20Roma,%20vi%20tu%20pagina%20y%20la%20cancion%20me%20encanto...%20la%20respuesta%20es%20SI%20❤️" class="btn">
+        <a href="https://wa.me/51945605009?text=Hola%20Roma,%20vi%20tu%20pagina,%20el%20corazon%20de%20tetris%20me%20encanto%20y%20la%20respuesta%20es%20SI%20❤️" class="btn">
             Responder por WhatsApp 💌
         </a>
     </div>
