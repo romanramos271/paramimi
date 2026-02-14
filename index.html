@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mimi ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+            border: 2px solid #ffe6e6;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff4d6d;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #ff4d6d;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff4d6d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ff2a55;
+        }
+
+        .heart-bg {
+            position: absolute;
+            color: rgba(255, 77, 109, 0.1);
+            z-index: 0;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart-bg" style="font-size: 5rem; top: 10%; left: 10%;">❤️</div>
+    <div class="heart-bg" style="font-size: 3rem; bottom: 20%; right: 10%; animation-delay: 1s;">❤️</div>
+    <div class="heart-bg" style="font-size: 4rem; top: 15%; right: 20%; animation-delay: 2s;">❤️</div>
+
+    <div class="container">
+        <h1>Para Mimi</h1>
+        <p>En el poco tiempo que llevamos conociéndonos, cada día me doy más cuenta de lo increíble que eres.</p>
+        
+        <p>Eres hermosa, inteligente, divertida, <span class="highlight">deportista</span> y carismática. No sé cómo tengo la suerte de tenerte cerca, pero me haces sentir cosas que no sentía hace mucho tiempo.</p>
+
+        <p>Hoy quiero preguntarte:</p>
+        <h2 style="color: #333; font-size: 1.2rem;">¿Quisieras intentarlo conmigo?</h2>
+        
+        <p style="font-size: 0.8rem; color: #888;">(Si necesitas tiempo, lo entiendo y te esperaré, porque verte feliz es lo que más quiero).</p>
+
+        <p>Con cariño,<br><strong>Roma</strong></p>
+
+        <a href="https://wa.me/51945605009?text=Hola%20Roma,%20vi%20tu%20pagina%20y%20la%20respuesta%20es%20SI%20❤️" class="btn">
+            Responder por WhatsApp 💌
+        </a>
+    </div>
+
+</body>
+</html>
