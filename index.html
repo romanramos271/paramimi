@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mimi ❤️</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500;600&display=swap');
 
         body {
             margin: 0;
@@ -14,94 +14,126 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            /* Un fondo un poco más cálido y romántico */
+            background: linear-gradient(135deg, #fff1f1 0%, #ffd1d1 100%);
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
 
         .container {
-            background: white;
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(255, 77, 109, 0.15);
             text-align: center;
             max-width: 90%;
             width: 400px;
-            border: 2px solid #ffe6e6;
+            border: 2px solid #ffccd5;
             position: relative;
             z-index: 10;
+            backdrop-filter: blur(5px);
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
-            color: #ff4d6d;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            color: #d6335c; /* Un rojo un poco más intenso */
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .intro-quote {
+            font-family: 'Dancing Script', cursive;
+            color: #d6335c;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
         }
 
         p {
-            color: #555;
+            color: #444;
             line-height: 1.6;
             margin-bottom: 15px;
             font-size: 0.95rem;
         }
 
         .highlight {
-            color: #ff4d6d;
+            color: #d6335c;
             font-weight: 600;
+        }
+
+        /* Estilo para el reproductor de YouTube */
+        .music-player {
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #ffccd5;
+            width: 100%;
+            max-width: 350px;
         }
 
         .btn {
             display: inline-block;
-            background-color: #ff4d6d;
+            background: linear-gradient(45deg, #ff4d6d, #ff2a55);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             margin-top: 20px;
-            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-            transition: transform 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            background-color: #ff2a55;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 77, 109, 0.5);
         }
 
         .heart-bg {
             position: absolute;
-            color: rgba(255, 77, 109, 0.1);
+            color: rgba(255, 77, 109, 0.07);
             z-index: 0;
-            animation: float 6s infinite ease-in-out;
+            animation: float 8s infinite ease-in-out;
+            user-select: none;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(10deg); }
         }
     </style>
 </head>
 <body>
 
-    <div class="heart-bg" style="font-size: 5rem; top: 10%; left: 10%;">❤️</div>
-    <div class="heart-bg" style="font-size: 3rem; bottom: 20%; right: 10%; animation-delay: 1s;">❤️</div>
-    <div class="heart-bg" style="font-size: 4rem; top: 15%; right: 20%; animation-delay: 2s;">❤️</div>
+    <div class="heart-bg" style="font-size: 6rem; top: 5%; left: 5%;">❤️</div>
+    <div class="heart-bg" style="font-size: 4rem; bottom: 15%; left: 10%; animation-delay: 1s;">💖</div>
+    <div class="heart-bg" style="font-size: 5rem; top: 20%; right: 10%; animation-delay: 2s;">❤️</div>
+    <div class="heart-bg" style="font-size: 3rem; bottom: 10%; right: 20%; animation-delay: 3s;">💖</div>
 
     <div class="container">
         <h1>Para Mimi</h1>
+        <div class="intro-quote">"Porque hay personas que te cambian la vida..."</div>
+
+        <div class="music-player">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/CPZwK5O_cFY?controls=1&showinfo=0&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>
+        </div>
+        <p style="font-size: 0.8rem; color: #888; margin-top: -10px; margin-bottom: 20px;">(Dale play para leer con música 🎵)</p>
+
+
         <p>En el poco tiempo que llevamos conociéndonos, cada día me doy más cuenta de lo increíble que eres.</p>
         
         <p>Eres hermosa, inteligente, divertida, <span class="highlight">deportista</span> y carismática. No sé cómo tengo la suerte de tenerte cerca, pero me haces sentir cosas que no sentía hace mucho tiempo.</p>
 
         <p>Hoy quiero preguntarte:</p>
-        <h2 style="color: #333; font-size: 1.2rem;">¿Quisieras intentarlo conmigo?</h2>
+        <h2 style="color: #333; font-size: 1.3rem; margin: 20px 0;">¿Quisieras intentarlo conmigo?</h2>
         
-        <p style="font-size: 0.8rem; color: #888;">(Si necesitas tiempo, lo entiendo y te esperaré, porque verte feliz es lo que más quiero).</p>
+        <p style="font-size: 0.85rem; color: #777;">(Si necesitas tiempo, lo entiendo y te esperaré, porque verte feliz es lo que más quiero).</p>
 
         <p>Con cariño,<br><strong>Roma</strong></p>
 
-        <a href="https://wa.me/51945605009?text=Hola%20Roma,%20vi%20tu%20pagina%20y%20la%20respuesta%20es%20SI%20❤️" class="btn">
+        <a href="https://wa.me/51945605009?text=Hola%20Roma,%20vi%20tu%20pagina%20y%20la%20cancion%20me%20encanto...%20la%20respuesta%20es%20SI%20❤️" class="btn">
             Responder por WhatsApp 💌
         </a>
     </div>
